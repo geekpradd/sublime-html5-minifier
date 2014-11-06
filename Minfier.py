@@ -1,7 +1,8 @@
 import sublime, sublime_plugin, urllib.request,urllib.parse,os,sys
 sys.path.append(os.path.join(os.path.dirname(__file__), "modules"))
 from HTMLMinifier import minify
-
+from jsmin import jsmin
+import cssmin
 
 
 
@@ -21,11 +22,8 @@ class MinifierCommand(sublime_plugin.TextCommand):
 
     if  self.extension == 'js':
 
-      data={'js_code':content,'compilation_level':'WHITESPACE_ONLY','output_format':'text','output_info':'compiled_code'}
-      d=urllib.parse.urlencode(data)
-      d=d.encode('utf-8')
-      req=urllib.request.urlopen('http://closure-compiler.appspot.com/compile',d)
-      code=str(req.read())[2:-3:]
+
+      code=jsmin(content)
 
       file=open(self.path,'w')
       file.write(code)
@@ -39,11 +37,8 @@ class MinifierCommand(sublime_plugin.TextCommand):
       file.close()
       self.view.window().open_file(self.path)
     elif self.extension=='css':
-      data={'input':content}
-      d=urllib.parse.urlencode(data)
-      d=d.encode('utf-8')
-      req=urllib.request.urlopen('http://cssminifier.com/raw',d)
-      code=str(req.read())[2:-1:]
+
+      code=cssmin.cssmin(content)
       file=open(self.path,'w')
       file.write(code)
       file.close()
