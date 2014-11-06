@@ -2,6 +2,9 @@ import sublime, sublime_plugin, urllib.request,urllib.parse,os,sys
 sys.path.append(os.path.join(os.path.dirname(__file__), "modules"))
 from HTMLMinifier import minify
 
+
+
+
 class MinifierCommand(sublime_plugin.TextCommand):
   def run(self, edit):
 
@@ -27,15 +30,14 @@ class MinifierCommand(sublime_plugin.TextCommand):
       file=open(self.path,'w')
       file.write(code)
       file.close()
-
+      self.view.window().open_file(self.path)
     elif self.extension=='html' or self.extension=='htm':
       code=minify(content)
 
       file=open(self.path,'w')
       file.write(code)
       file.close()
-
-
+      self.view.window().open_file(self.path)
     elif self.extension=='css':
       data={'input':content}
       d=urllib.parse.urlencode(data)
@@ -45,6 +47,6 @@ class MinifierCommand(sublime_plugin.TextCommand):
       file=open(self.path,'w')
       file.write(code)
       file.close()
-
+      self.view.window().open_file(self.path)
 
 
