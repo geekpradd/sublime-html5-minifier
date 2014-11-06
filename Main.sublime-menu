@@ -1,0 +1,14 @@
+[
+{
+    "id" : "HTML5 Minifier",
+    "caption" : "HTML5 Minifier",
+
+    "children":
+    [
+{"caption":"Minify Current File",
+"command" : "minifier",
+
+}
+    ]
+}
+]
