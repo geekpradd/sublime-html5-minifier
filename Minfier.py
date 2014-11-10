@@ -42,6 +42,7 @@ class MinifierCommand(sublime_plugin.TextCommand):
       file=open(self.path,'w')
       file.write(code)
       file.close()
+      window=sublime.active_window()
       self.view.window().open_file(self.path)
 
 

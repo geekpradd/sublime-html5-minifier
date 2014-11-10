@@ -1,11 +1,11 @@
 [
 {
-    "id" : "HTML5 Minifier",
-    "caption" : "HTML5 Minifier",
+    "id" : "HTML5",
+    "caption" : "HTML5 Tools",
 
     "children":
     [
-{"caption":"Minify Current File",
+{"caption":"Minify Current HTML5",
 "command" : "minifier",
 
 }
