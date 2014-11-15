@@ -23,17 +23,19 @@ class MinifierCommand(sublime_plugin.TextCommand):
 
     return [self.location,self.name,self.folder,self.extension,self.n,self.path]
   def run(self, edit):
-    if os.path.exists(self.locations[-1]):
-      self.view.window().open_file(self.locations[-1])
 
-    else:
 
-        self.content=self.getContent()
+    td=threading.Thread(target=self.exists)
+    td.start()
 
-        self.locations=self.locationParams()
 
-        t=threading.Thread(target=self.writeMinified)
-        t.start()
+
+  def exists(self):
+    self.content=self.getContent()
+    self.locations=self.locationParams()
+    t=threading.Thread(target=self.writeMinified)
+    t.start()
+
 
   def writeMinified(self):
     if  self.locations[3] == 'js':
@@ -41,23 +43,22 @@ class MinifierCommand(sublime_plugin.TextCommand):
 
         code=jsmin(self.content)
 
-        file=open(self.locations[-1],'w')
-        file.write(code)
-        file.close()
+        with open(self.locations[-1],'w') as file:
+            file.write(code)
+
         self.view.window().open_file(self.locations[-1])
     elif self.locations[3]=='html' or self.locations[3]=='htm':
         code=minify(self.content)
 
-        file=open(self.locations[-1],'w')
-        file.write(code)
-        file.close()
+        with open(self.locations[-1],'w') as file:
+            file.write(code)
+
         self.view.window().open_file(self.locations[-1])
     elif self.locations[3]=='css':
 
         code=cssmin.cssmin(self.content)
-        file=open(self.locations[-1],'w')
-        file.write(code)
-        file.close()
+        with open(self.locations[-1],'w') as file:
+            file.write(code)
         window=sublime.active_window()
         self.view.window().open_file(self.locations[-1])
 
