@@ -23,18 +23,17 @@ class MinifierCommand(sublime_plugin.TextCommand):
 
     return [self.location,self.name,self.folder,self.extension,self.n,self.path]
   def run(self, edit):
-
-
-    self.content=self.getContent()
-
-    self.locations=self.locationParams()
-
     if os.path.exists(self.locations[-1]):
       self.view.window().open_file(self.locations[-1])
 
     else:
-      t=threading.Thread(target=self.writeMinified)
-      t.start()
+
+        self.content=self.getContent()
+
+        self.locations=self.locationParams()
+
+        t=threading.Thread(target=self.writeMinified)
+        t.start()
 
   def writeMinified(self):
     if  self.locations[3] == 'js':

@@ -18,7 +18,7 @@ For example, if you are working on a file 'main.css' in the location 'C:\Project
 
 This is done to keep two versions of the codebase, one minified and the other development version
 
-##What's new in Version 1.1?
+##Change Log
 
 Version 1.1 contains the following changes in the plugin:
 
@@ -37,6 +37,8 @@ Version 1.1.1
 - Changed HTML minify module from HTML Minfier to htmlmin
 
 - Improved performance and reliability thanks to htmlmin
+
+Version 1.1.2
 
 - File Auto Open if exists not working bug fixed
 
