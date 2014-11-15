@@ -2,7 +2,7 @@ import sublime, sublime_plugin, urllib.request,urllib.parse,os,sys, threading
 
 sys.path.append(os.path.join(os.path.dirname(__file__), "modules"))
 
-from HTMLMinifier import minify
+from htmlmin import minify
 from jsmin import jsmin
 import cssmin
 
@@ -29,7 +29,7 @@ class MinifierCommand(sublime_plugin.TextCommand):
 
     self.locations=self.locationParams()
 
-    if os.path.exists(self.path):
+    if os.path.exists(self.locations[-1]):
       self.view.window().open_file(self.locations[-1])
 
     else:
