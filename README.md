@@ -28,9 +28,18 @@ Version 1.1 contains the following changes in the plugin:
 
 - Already Minified versions of the file will open up in the Sublime Window, instead of no output being shown.
 
-- Performance Imporvements
+- Performance Improvements
 
 - Javascript Not Opening Bug Fixed 
+
+Version 1.1.1
+
+- Changed HTML minify module from HTML Minfier to htmlmin
+
+- Improved performance and reliability thanks to htmlmin
+
+- File Auto Open if exists not working bug fixed
+
 
 ##A Request to OSX and Linux Users
 
