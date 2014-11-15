@@ -4,7 +4,7 @@ This is a Sublime Text 3 Plugin for reducing the code size of HTML5, CSS3 and Ja
 
 ##Installation
 
-This plugin can be installed by searching for HTML5 Minifier on Package Control in Sublime Text 3. 
+This plugin can be installed by searching for HTML Minifier on Package Control in Sublime Text 3. 
 
 You can install Package Control by following these steps: [https://sublime.wbond.net/installation](https://sublime.wbond.net/installation)
 
@@ -17,6 +17,24 @@ Alternatively, Right Click on the Editor area or the sidebar and click 'Minify H
 For example, if you are working on a file 'main.css' in the location 'C:\Projects\' then a minified file will be created at 'C:\Projects\' with the name main.min.css making the full path 'C:\Projects\main.min.css'.
 
 This is done to keep two versions of the codebase, one minified and the other development version
+
+##What's new in Version 1.1?
+
+Version 1.1 contains the following changes in the plugin:
+
+- Minifying Process runs in a separate thread
+
+- Source has been streamlined on the principles of OOP
+
+- Already Minified versions of the file will open up in the Sublime Window, instead of no output being shown.
+
+- Performance Imporvements
+
+- Javascript Not Opening Bug Fixed 
+
+##A Request to OSX and Linux Users
+
+If you have installed this package, and you are finding issues with the Plugin on OSX and Linux (I can't test the plugin on these platforms), Please open a Issue Thread on GitHub and I'll try to solve it.
 
 ##About 
 
