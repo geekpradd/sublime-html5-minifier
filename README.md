@@ -10,7 +10,7 @@ You can install Package Control by following these steps: [https://sublime.wbond
 
 ##Usage
 
-In order to minify code, Click on the HTML5 Minifier option and click Minify Current File. A .min file be added onto the current directory where you are working. 
+In order to minify code, Click on the HTML5 Tools option and click Minify Current File. A .min file be added onto the current directory where you are working. 
 
 Alternatively, Right Click on the Editor area or the sidebar and click 'Minify HTML5 File'.
 
@@ -42,6 +42,11 @@ Version 1.1.2
 
 - File Auto Open if exists not working bug fixed
 
+Version 1.2
+
+- Performance Optimisations
+- Bug Fixing
+- Module changing for better support
 
 ##A Request to OSX and Linux Users
 
