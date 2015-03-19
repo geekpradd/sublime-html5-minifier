@@ -1,5 +1,7 @@
 #Sublime HTML5 Minifier
 
+<a href="https://packagecontrol.io/packages/HTML%20Minifier"><img src="https://packagecontrol.herokuapp.com/downloads/HTML%20Minifier.svg"></a>
+
 This is a Sublime Text 3 Plugin for reducing the code size of HTML5, CSS3 and Javascript files. 
 
 ##Installation
