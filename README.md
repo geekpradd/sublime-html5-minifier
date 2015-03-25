@@ -12,13 +12,17 @@ You can install Package Control by following these steps: [https://sublime.wbond
 
 ##Usage
 
-In order to minify code, Click on the HTML5 Tools option and click Minify Current File. A .min file be added onto the current directory where you are working. 
+In order to minify code, Click on the Tools menu and click Minify Current File. A .min file be added onto the current directory where you are working. 
 
 Alternatively, Right Click on the Editor area or the sidebar and click 'Minify HTML5 File'.
 
 For example, if you are working on a file 'main.css' in the location 'C:\Projects\' then a minified file will be created at 'C:\Projects\' with the name main.min.css making the full path 'C:\Projects\main.min.css'.
 
 This is done to keep two versions of the codebase, one minified and the other development version
+
+####Command Palllete
+
+Press Ctrl+Shift+P and then type `Minify File` and press enter.
 
 ##Change Log
 
@@ -34,15 +38,6 @@ Version 1.1 contains the following changes in the plugin:
 
 - Javascript Not Opening Bug Fixed 
 
-Version 1.1.1
-
-- Changed HTML minify module from HTML Minfier to htmlmin
-
-- Improved performance and reliability thanks to htmlmin
-
-Version 1.1.2
-
-- File Auto Open if exists not working bug fixed
 
 Version 1.2
 
@@ -56,10 +51,11 @@ Version 1.3
 - Code uses PEP8 
 - Better Linux Support
 
+Version 1.3.1 
 
-##A Request to OSX and Linux Users
+- Commands for Command Pallete 
+- Switch Menu to Tools
 
-If you have installed this package, and you are finding issues with the Plugin on OSX and Linux (I can't test the plugin on these platforms), Please open a Issue Thread on GitHub and I'll try to solve it.
 
 ##About 
 

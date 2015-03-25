@@ -1,0 +1,6 @@
+[
+    {
+        "caption": "HTML Minfier: Minify File",
+        "command": "minifier"
+    }
+    ]
