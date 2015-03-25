@@ -50,6 +50,13 @@ Version 1.2
 - Bug Fixing
 - Module changing for better support
 
+Version 1.3 
+
+- Mac OS X Bug fixes 
+- Code uses PEP8 
+- Better Linux Support
+
+
 ##A Request to OSX and Linux Users
 
 If you have installed this package, and you are finding issues with the Plugin on OSX and Linux (I can't test the plugin on these platforms), Please open a Issue Thread on GitHub and I'll try to solve it.
