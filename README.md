@@ -18,11 +18,14 @@ Alternatively, Right Click on the Editor area or the sidebar and click 'Minify H
 
 For example, if you are working on a file 'main.css' in the location 'C:\Projects\' then a minified file will be created at 'C:\Projects\' with the name main.min.css making the full path 'C:\Projects\main.min.css'.
 
-This is done to keep two versions of the codebase, one minified and the other development version
+This is done to keep two versions of the codebase, one minified and the other development version.
+
+If you want to overwrite your file, such that the minified version of say `main.html` should be written to `main.html` inplace of `main.min.html`, click on Tools - Minify HTML5 File (modify existing)
 
 ####Command Palllete
 
-Press Ctrl+Shift+P and then type `Minify File` and press enter.
+Press Ctrl+Shift+P and then type `Minify File`. You have two options:
+If you want to create a new file, then click on "HTML Minfier: Minify File (create new)" or if you want to write to the current file, then click on "HTML Minfier: Minify File (modify existing)"
 
 ##Change Log
 
