@@ -1,7 +1,14 @@
 [
-
-{
-  "keys":["ctrl+shift+m"],
-  "command":"minifier"
-
-  }]
+  {
+    "keys": [
+      "ctrl+shift+m"
+    ],
+    "command": "minifier"
+  },
+  {
+  	"keys": [
+  		"ctrl+shift+alt+m"
+  	],
+  	"command": "minifier2"
+  }
+]

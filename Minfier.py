@@ -69,3 +69,38 @@ class MinifierCommand(sublime_plugin.TextCommand):
 
             window = sublime.active_window()
             self.view.window().open_file(self.minifiedLocation)
+
+class Minifier2Command(sublime_plugin.TextCommand):
+
+    def get_content(self):
+        allcontent = sublime.Region(0, self.view.size())
+        content = self.view.substr(allcontent)
+        return content
+
+    def extension(self):
+        self.location = self.view.file_name()
+        print (self.location)
+        if IS_WINDOWS:
+            self.name = self.location.split('\\')[-1]
+        else:
+            self.name = self.location.split('/')[-1]
+
+        self.folder = self.location.replace(self.name, '')
+        extension = self.name.split('.')[-1]
+        return extension
+
+    def run(self, edit):
+        t = threading.Thread(target=self.main)
+        t.start()
+
+    def main(self):
+        self.content = self.get_content()
+        self.write()
+
+    def write(self):
+        self.content = return_minified(self.content, self.extension())
+        sublime.active_window().run_command("writeminify", {"content":self.content})
+        
+class writeminifyCommand(sublime_plugin.TextCommand):
+    def run(self, edit, content):
+        self.view.replace(edit,sublime.Region(0, self.view.size()),content)

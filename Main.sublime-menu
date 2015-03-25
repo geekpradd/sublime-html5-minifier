@@ -1,14 +1,15 @@
 [
-{
-    "id" : "tools",
-    
-
-    "children":
-    [
-{"caption":"Minify Current HTML5",
-"command" : "minifier",
-
-}
+  {
+    "id": "tools",
+    "children": [
+      {
+        "caption": "Minify Current HTML5 (create new)",
+        "command": "minifier"
+      },
+      {
+        "caption": "Minify Current HTML5 (modify existing)",
+        "command": "minifier2"
+      }
     ]
-}
+  }
 ]

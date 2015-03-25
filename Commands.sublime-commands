@@ -1,6 +1,10 @@
 [
-    {
-        "caption": "HTML Minfier: Minify File",
-        "command": "minifier"
-    }
-    ]
+  {
+    "caption": "HTML Minfier: Minify File (create new)",
+    "command": "minifier"
+  },
+  {
+    "caption": "HTML Minfier: Minify File (modify existing)",
+    "command": "minifier2"
+  }
+]

@@ -51,11 +51,11 @@ Version 1.3
 - Code uses PEP8 
 - Better Linux Support
 
-Version 1.3.1 
+Version 1.4 
 
+- Ability to Minify Files in the same file instead of creating a new file 
 - Commands for Command Pallete 
-- Switch Menu to Tools
-
+- Switch Menu to Tools 
 
 ##About 
 
